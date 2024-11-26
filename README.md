@@ -5,6 +5,13 @@ The TODO.txt file contains plans for upcoming work on the software, as well as a
 The backtesting system is not included here as it is being completely rewritten, however an old test script has been kept so that the basic functionality of the 
   old system can still be seen.
 
+REQUIRED LIBRARIES
+Pandas
+Numpy
+Alpaca.py      - This will be removed in the next update in favour of a REST approach.
+Backtesting-py - Required only for legacy backtesting test script
+Bokeh          - Required only for legacy backtesting test script
+
 Note that code is functional but is missing required files.
 
 For the live environment, you must add a 'Constants.py' file which contains the following constants:
