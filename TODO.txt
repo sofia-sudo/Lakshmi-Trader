@@ -1,0 +1,56 @@
+== LOOSE DOCUMENT FOR PERSONAL USE ==
+
+THIS SPRINT
+- Rework Backtesting Engine: Total Rebuild
+--- Backtesting engine is not properly integrated into the rest of the system. It is overly dependent on a third-party library which, 
+        whilst efficient, cannot be feasibly adapted to operate with the rest of the system. Backtesting should meet the following requirements:
+        - Accept a given timeframe and input parameters
+        - Obtain the relevant historical data for this timeframe
+        - Simulate the operation of the software throughout this timeframe
+        - Calculate expected PnL
+        - Be fully integrated into the system
+                - Should operate on the same platform
+                - Any errors or bugs present in the system should also appear in Backtesting
+        - Should run efficiently and execute in a timely manner
+        - Be asset-specific AND portfolio-specific (User defines at launch)
+
+
+NEXT SPRINT
+- Strategy Optimisation System: Two Approaches
+        There are two approaches under consideration for strategy optimisation, a conventional approach and a more novel approach.
+
+        Conventionally, the optimisation of hyperparameters would be performed using a Grid Search. This is simple to implement but 
+        it is unclear if the hardware available is sufficient to run a grid search of this magnitude; execution could take days or even weeks.
+
+        An alternative approach is to use genetic algorithms; the indicators and thresholds included in the algorithm could be formed into a 
+        genome and expected PnL derived from a backtest could be used as a performance evaluation metric, or fitness function.
+
+
+PRIORITY BACKLOG
+- Rework indicator subscription system, it is inefficient. There is a more readable way to implement this:
+        - Builder to make a customised object that calculates only the relevant indicators
+                -- Interface provides only 1 function 'CalculateIndicators()'
+                -- All other functions are made available via a builder and declared only once, at instantiation: eg:
+                'ASSET_data_engine = DataEngineBuilder() ## Returns DataEngine() object
+                                                .IncludeRSI(__parameters__)
+                                                .IncludeBB(__parameters__)
+                                                .IncludeEMA(__parameters__)
+                df = ASSET_data_engine.CalculateIndicators(df)' 
+
+- Construct full StrategyEngine for customising algorithms per asset/ticker.
+- Add functionality to adjust strategy automatically during runtime to reflect changing market conditions
+        - Algorithm could switch from a more aggressive strategy to a more defensive strategy, or vice-versa.
+        - Could be achieved with pre-programmed alternate algorithms, or via dynamic thresholds.
+- Derivative Support in preparation for API changes;
+        - Options pricing (Black-Scholes Model)
+        - Hardware-efficient system for approximating price impact (Monte Carlo?)
+        - Design a 'TraderInterface' and refactor current 'Trader' class into 'Asset' and 'Derivative'
+
+
+LOW PRIORITY BACKLOG
+- Can interim HistoricalData be approximated using AI?
+- Can a statistical or logical model outperform a purely algorithmic model?
+- Would it be profitable to slow down the system to a 2-3 day holding period as this would
+    avoid restrictions levied by the US government on pattern day traders?
+- Leverage implementation
+- Can indicator calculation time be improved by harnessing R or an alternative maths-focussed language?

@@ -1,0 +1,67 @@
+<mxfile host="Electron" modified="2024-09-16T14:21:43.215Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="GyYZxgQcVo2GNJj3UUwY" version="24.2.5" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2261" dy="851" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="wAz0qu-pdxang0oZIPrd-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-25" target="wAz0qu-pdxang0oZIPrd-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-25" target="wAz0qu-pdxang0oZIPrd-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-25" value="Master&lt;div&gt;&lt;i&gt;Manages Tick Cycle&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="200" y="785" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-26" target="wAz0qu-pdxang0oZIPrd-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-26" value="ExchangeEngine&lt;div&gt;&lt;i&gt;Interfaces exchange and market info&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="355" y="875" width="125" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-27" target="wAz0qu-pdxang0oZIPrd-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-27" value="Trader&lt;div&gt;&lt;i&gt;Manages buy/sell for one asset&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="40" y="980" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-29" target="wAz0qu-pdxang0oZIPrd-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-29" value="MarketEngine&lt;div&gt;&lt;i&gt;Retrieves live quotes for subscribed assets&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="540" y="880" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-32" target="wAz0qu-pdxang0oZIPrd-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-32" value="DataEngine&lt;div&gt;&lt;i&gt;Calculates indicators that Trader is subscribed to&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="540" y="980" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-35" target="wAz0qu-pdxang0oZIPrd-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-35" value="HistoricalDataEngine&lt;div&gt;&lt;i&gt;Retrieves recent historical data&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="720" y="880" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-50" target="wAz0qu-pdxang0oZIPrd-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-50" value="TradeEngine&lt;div&gt;&lt;i&gt;Handles buy/sell logic&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="40" y="880" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-56" target="wAz0qu-pdxang0oZIPrd-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-56" value="PortfolioEngine&lt;div&gt;&lt;i&gt;Manages assets and finance&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-140" y="780" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wAz0qu-pdxang0oZIPrd-60" target="wAz0qu-pdxang0oZIPrd-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wAz0qu-pdxang0oZIPrd-60" value="Strategy (DIR)&lt;div&gt;&lt;i&gt;Strategy logic&lt;/i&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-140" y="880" width="130" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
